@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<!-- Angular module directive =========================================== -->
+<html lang="en" ng-app="sampleApp">
+
+  <head>
+        <title><%= title %></title>
+    
+        <!-- =================================================================== -->
+        <!--                                                                     -->
+        <!--  display mobile width even mobile device has enough pixels          -->
+        <!--                                                                     -->
+        <!-- =================================================================== -->               
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                
+        <!-- =================================================================== -->
+        <!--                                                                     -->
+        <!--  bootstrap.css, compiled and download from bootstrap customize page -->
+        <!--                                                                     -->
+        <!-- =================================================================== --> 
+        <link href = "/stylesheets/bootstrap.css" rel = "stylesheet" />
+        <link href='/stylesheets/style.css' rel='stylesheet' />
+  </head>
+  <body>
+
+        <!-- Angular view directive ============================================ -->
+        <div ng-view></div>
+        
+    
+        <!-- =================================================================== -->
+        <!--                                                                     -->
+        <!--  This is navigation bar for footer.                                 -->
+        <!--                                                                     -->
+        <!--  For nav bar classes, first say navbar, then what type of navbar,   -->
+        <!--  navbar-default is white, navbar-fixed-bottom put vavbar in bottom  -->
+        <!--                                                                     -->
+        <!-- =================================================================== --> 
+        <div class = "navbar navbar-default navbar-fixed-bottom">
+           
+            <!-- =================================================================== -->
+            <!--                                                                     -->
+            <!--  class container make sure the content stay in proper places        -->
+            <!--                                                                     -->
+            <!-- =================================================================== --> 
+            <div class = "container">
+                    <p class = "navbar-text pull-left">Site Built By A Web Developer</p>
+                        
+                    <!-- =================================================================== -->
+                    <!--                                                                     -->
+                    <!-- check bootstrap site and find btn-danger is better fit our need     -->
+                    <!--                                                                     -->
+                    <!-- =================================================================== --> 
+                    <a href = "#" class = "navbar-btn btn-danger btn pull-right">Subscribe</a>
+            </div>
+       
+        </div>
+        
+        <!-- Contact dialog ============================================ -->
+        <div class = "modal fade" id = "contact" role = "dialog">
+            <div class = "modal-dialog">
+                <div class = "modal-content">
+                    <form class = "form-horizontal">
+                        <div class = "modal-header">
+                            <h4>Contact Tech Site</h4>
+                        </div>
+                        <div class = "modal-body">
+                       
+                            <div class = "form-group">
+                               
+                                <label for = "contact-name" class = "col-lg-2 control-label">Name:</label>
+                                <div class = "col-lg-10">
+                                   
+                                    <input type = "text" class = "form-control" id = "contact-name" placeholder = "Full Name">
+                                   
+                                </div>
+                               
+                            </div>
+                           
+                            <div class = "form-group">
+                               
+                                <label for = "contact-email" class = "col-lg-2 control-label">Email:</label>
+                                <div class = "col-lg-10">
+                                   
+                                    <input type = "email" class = "form-control" id = "contact-email" placeholder = "you@example.com">
+                                   
+                                </div>
+                               
+                            </div>
+                           
+                            <div class = "form-group">
+                               
+                                <label for = "contact-msg" class = "col-lg-2 control-label">Message:</label>
+                                <div class = "col-lg-10">
+                                   
+                                    <textarea class = "form-control" rows = "8"></textarea>
+                                   
+                                </div>
+                               
+                            </div>
+                       
+                        </div>
+                        <div class = "modal-footer">
+                    <a class = "btn btn-default" data-dismiss = "modal">Close</a>    
+                            <button class = "btn btn-primary" type = "submit">Send</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+		<!-- jQuery ============================================================= -->
+        <script src = "/javascripts/lib/jquery.js"></script>
+        
+        <!-- Bootstrap, download and compiled in customize page ================= -->
+        <script src = "/javascripts/lib/bootstrap.js"></script>
+          
+		<!-- Angular ============================================================= -->
+        <script src = "/javascripts/lib/angular.js"></script>
+        <script src = "/javascripts/app.js"></script>
+        <script src = "/javascripts/services.js"></script>
+
+  </body>
+</html>
